@@ -1,5 +1,9 @@
 # A-Frame with Create-React-App Demo
 
+A-Frame is a web framework for building virtual reality experiences. Since A-Frame is built on top of the DOM, web libraries such as React, Vue.js, Angular, Ember.js, d3.js are able to sit cleanly on top of A-Frame.
+
+
+
 ## Step 1: 
 
 Run `create-react-app` in the root of your project folder. 
@@ -63,7 +67,9 @@ class App extends Component {
 
 ## Step 5 
 
-We will now add our first Entity tag. 
+We will now add our first Entity tag.
+
+In A-Frame, HTML attributes map to components which are composable modules that are plugged into Entity tags to attach appearance, behavior, and functionality. 
 
 A-Frame provides a handful of elements such as `a-box` or `a-sky` called primitives that wrap the entity-component pattern to make it appealing for beginners. Developers can create their own primitives as well. 
 
@@ -154,6 +160,12 @@ Make another Entity tag and give it particle-system which will be equal to doubl
 
 aframe-particle-system-component also allows you to have dust or rain in addition to snow you would just adjust the preset accordingly. You can change the color as well just by adding a color property inside the particle-system object with a value of whatever color you want in a string.
 
+You can play around with size, colors, etc.
+
+```
+<Entity particle-system={{preset: 'snow', color: '#0000FF,#00FF00,#FF0000', particleCount: 8000, size: 4 }} />
+```
+
 
 ## Resources: 
 
@@ -169,3 +181,4 @@ aframe-particle-system-component also allows you to have dust or rain in additio
 - https://www.npmjs.com/package/aframe-animation-component
 - https://github.com/aframevr/aframe/blob/master/docs/components/position.md
 - https://github.com/aframevr/aframe/blob/master/docs/components/rotation.md
+- https://www.npmjs.com/package/aframe-react
