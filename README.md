@@ -16,10 +16,14 @@ cd app && npm start
 
 ## Step 2: 
 
-Install required dependencies: 
-  - aframe
-  - aframe-particle-system-component
-  - aframe-react
+Install dependencies:
+
+**Required for using A-Frame with React:** 
+  - aframe 
+  - aframe-react 
+
+**Optional:**
+  - aframe-particle-system-component 
 
 To do this you can run the following in your terminal: 
   
