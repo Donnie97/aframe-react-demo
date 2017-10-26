@@ -166,6 +166,45 @@ You can play around with size, colors, etc.
 <Entity particle-system={{preset: 'snow', color: '#0000FF,#00FF00,#FF0000', particleCount: 8000, size: 4 }} />
 ```
 
+Building a snowman and adding an image to a shape:
+```
+import React, { Component } from 'react';
+import './App.css';
+
+import 'aframe';
+import 'aframe-particle-system-component';
+import {Entity, Scene, a} from 'aframe-react';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Scene>
+
+          <Entity primitive='a-sky' src="https://ucarecdn.com/19a73c27-dc44-4e15-9d49-e93fd70d8014/"/>
+
+          <Entity primitive='a-box' color="blue" position="12 0 -5" />
+
+          <Entity primitive='a-sphere' color='white' position="2 0 -10" />
+          <Entity primitive='a-sphere' color='white' position="2 1.8 -10" radius=".8"/>
+          <Entity primitive='a-sphere' color='white' position="2 3 -10" radius=".5"/>
+
+          <Entity primitive='a-cylinder' src="http://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-8.jpg" position="12 1.5 -5" rotation="90 90 180"/>
+          {/* Must have cors chrome extension turned on for outside images to work */}
+
+          <Entity particle-system={{preset: 'snow', particleCount: 8000}}/>
+
+          <Entity particle-system={{preset: 'snow', color: '#0000FF,#00FF00,#FF0000', particleCount: 8000, size: 4 }} />
+ 
+        </Scene>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+```
 
 ## Resources: 
 
